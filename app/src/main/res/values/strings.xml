@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">binWeather</string>
+    <string name="app_name">木木天气</string>
+    <string name="forecast_string">三天预报</string>
+    <string name="suggest_string">生活建议</string>
+    <string name="aqi_quality">空气质量</string>
+    <string name="aqi_string">AQI指数</string>
+    <string name="pm25_string">PM2.5指数</string>
+    <string name="title_string">刷新时间：</string>
 </resources>

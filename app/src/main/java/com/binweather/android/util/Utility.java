@@ -5,6 +5,8 @@ import android.text.TextUtils;
 import com.binweather.android.db.City;
 import com.binweather.android.db.County;
 import com.binweather.android.db.Province;
+import com.binweather.android.gson.Datas;
+import com.binweather.android.gson.News;
 import com.binweather.android.gson.Weather;
 import com.google.gson.Gson;
 

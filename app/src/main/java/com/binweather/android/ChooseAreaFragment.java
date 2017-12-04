@@ -15,10 +15,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.binweather.android.activity.MainActivity;
+import com.binweather.android.activity.WeatherActivity;
 import com.binweather.android.db.City;
 import com.binweather.android.db.County;
 import com.binweather.android.db.Province;
-import com.binweather.android.gson.Weather;
 import com.binweather.android.util.HttpUtil;
 import com.binweather.android.util.Utility;
 
@@ -79,10 +80,17 @@ public class ChooseAreaFragment extends Fragment {
                     queryCounties();
                 }else if (currentLevel==LEVEL_COUNTY){
                     String weatherId=countyList.get(position).getWeatherId();
+                    if (getActivity()instanceof MainActivity){
                     Intent intent=new Intent(getActivity(), WeatherActivity.class);
                     intent.putExtra("weather_id",weatherId);
                     startActivity(intent);
                     getActivity().finish();
+                    } else if (getActivity()instanceof WeatherActivity) {
+                        WeatherActivity activity=(WeatherActivity)getActivity();
+                        activity.drawerLayout.closeDrawers();
+                       // activity.swipeRefresh.setRefreshing(true);
+                        activity.requestWeather(weatherId);
+                    }
                 }
             }
         });
@@ -132,10 +140,6 @@ public class ChooseAreaFragment extends Fragment {
             queryFromServer(address, "city");
         }
     }
-
-    /**
-     * 查询选中市内所有的县，优先从数据库查询，如果没有查询到再去服务器上查询。
-     */
     private void queryCounties() {
         titleText.setText(selectedCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
@@ -196,14 +200,9 @@ public class ChooseAreaFragment extends Fragment {
                         }
                     });
                 }
-
             }
         });
     }
-
-    /**
-     * 显示进度对话框
-     */
     private void showProgressDialog() {
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(getActivity());
@@ -212,10 +211,6 @@ public class ChooseAreaFragment extends Fragment {
         }
         progressDialog.show();
     }
-
-    /**
-     * 关闭进度对话框
-     */
     private void closeProgressDialog() {
         if (progressDialog != null) {
             progressDialog.dismiss();

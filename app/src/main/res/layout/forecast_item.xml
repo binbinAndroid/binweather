@@ -17,7 +17,7 @@
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:gravity="center"
-        android:textColor="#fff"/>
+        android:textColor="@color/color_white"/>
     <TextView
         android:id="@+id/max_text"
         android:layout_width="0dp"
@@ -25,7 +25,7 @@
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:gravity="right"
-        android:textColor="#fff"/>
+        android:textColor="@color/color_white"/>
     <TextView
         android:id="@+id/min_text"
         android:layout_width="0dp"
@@ -33,5 +33,5 @@
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:gravity="right"
-        android:textColor="#fff"/>
+        android:textColor="@color/color_white"/>
 </LinearLayout>

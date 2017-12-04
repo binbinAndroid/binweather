@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="color_white">#fff</color>
+    <color name="color_suggestion">#a9a0a0</color>
+    <color name="color_news_while">#ffffff</color>
+    <color name="color_news_gray">#beb8b8</color>
+    <color name="color_news_model">#dfd4d4</color>
+    <color name="color_blue">#41B6FF</color>
 </resources>

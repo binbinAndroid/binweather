@@ -1,10 +1,12 @@
-package com.binweather.android;
+package com.binweather.android.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.binweather.android.R;
 
 public class MainActivity extends AppCompatActivity {
 

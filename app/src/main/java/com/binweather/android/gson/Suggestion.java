@@ -13,17 +13,46 @@ public class Suggestion {
     public Comfort comfort;
     @SerializedName("cw")
     public CarWash carWash;
+    @SerializedName("drsg")
+    public Dress dress;
+    @SerializedName("flu")
+    public Cold cold;
+    @SerializedName("trav")
+    public Travel travel;
+    @SerializedName("uv")
+    public Ultraviolet ultraviolet;
+    public Air air;
     public Sport sport;
     public class Comfort{
-        @SerializedName("txt")
+        @SerializedName("brf")
         public String info;
     }
     public class CarWash{
-        @SerializedName("txt")
+        @SerializedName("brf")
         public String info;
     }
     public class Sport{
-        @SerializedName("txt")
+        @SerializedName("brf")
+        public String info;
+    }
+    public class Dress{
+        @SerializedName("brf")
+        public String info;
+    }
+    public class Cold{
+        @SerializedName("brf")
+        public String info;
+    }
+    public class Travel{
+        @SerializedName("brf")
+        public String info;
+    }
+    public class Ultraviolet{
+        @SerializedName("brf")
+        public String info;
+    }
+    public class Air{
+        @SerializedName("brf")
         public String info;
     }
 }
